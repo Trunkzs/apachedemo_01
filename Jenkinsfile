@@ -4,7 +4,7 @@ pipeline {
     stage('error') {
       agent any
       steps {
-        sh 'docker exec jmeter-master bash '
+        sh 'docker network ls '
       }
     }
 
