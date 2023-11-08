@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('error') {
       steps {
-        sh 'jmeter -n -t SummaryReport.jmx -l TestResult.jtl -e -o /reports/'
+        sh '/opt/apache-jmeter-5.6.2/bin/jmeter -n -t SummaryReport.jmx -l TestResult.jtl -e -o /reports/'
       }
     }
 
