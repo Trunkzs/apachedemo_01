@@ -4,7 +4,13 @@ pipeline {
     stage('error') {
       agent any
       steps {
-        sh 'docker exec jmeter-master bash & pwd'
+        sh 'docker exec jmeter-master bash '
+      }
+    }
+
+    stage('pwd') {
+      steps {
+        sh 'pwd'
       }
     }
 
