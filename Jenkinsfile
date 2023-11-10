@@ -4,13 +4,7 @@ pipeline {
     stage('error') {
       agent any
       steps {
-        sh 'docker exec jmeter-master bash'
-      }
-    }
-
-    stage('pwd') {
-      steps {
-        sh 'pwd'
+        sh '/opt/apache-jmeter-5.6.2/bin/jmeter -n -t SummaryReport.jmx -l /opt/result/TestResult-$BUILD_NUMBER.csv -e -o /opt/reports/$BUILD_NUMBER'
       }
     }
 
