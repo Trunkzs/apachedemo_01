@@ -7,14 +7,5 @@ pipeline {
       }
     }
 
-    stage('Publish HTML Report') {
-      steps {
-        script {
-          publishHTML(allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: "/opt/reports/$BUILD_NUMBER", reportFiles: 'index.html', reportName: 'jmeter', reportTitles: '')
-        }
-
-      }
-    }
-
   }
 }
