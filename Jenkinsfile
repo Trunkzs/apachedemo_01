@@ -7,5 +7,14 @@ pipeline {
       }
     }
 
+    stage('HTML Report') {
+      steps {
+        script {
+          publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, reportDir: 'opt/reports/$BUILD_NUMBER', reportFiles: 'index.html'])
+        }
+
+      }
+    }
+
   }
 }
