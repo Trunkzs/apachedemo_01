@@ -20,7 +20,7 @@ pipeline {
  post {
         always {  
             publishHTML target: [
-                reportName: 'Test',
+                reportName: 'HTML Reports',
                 reportDir: '/opt/reports/$BUILD_NUMBER',
                 reportFiles: 'index.html', 
                 reportTitles: 'Jmeter-report', 
